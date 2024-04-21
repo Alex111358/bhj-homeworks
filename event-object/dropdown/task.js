@@ -1,11 +1,11 @@
-function openMenu (){
-    document.querySelector('.dropdown__list').classList.add('dropdown__list_active')  
+function clickMenu (){
+    document.querySelector('.dropdown__list').classList.toggle('dropdown__list_active')  
 }
 function closeMenu (){
     document.querySelector('.dropdown__list').classList.remove('dropdown__list_active')  
 }
 const value = document.querySelector('.dropdown__value')
-value.addEventListener('click',openMenu )
+value.addEventListener('click',clickMenu )
 var machineCode = Array.from(document.querySelectorAll('.dropdown__item'))
 machineCode.forEach((item, index) =>{
     item.onclick = () => {
